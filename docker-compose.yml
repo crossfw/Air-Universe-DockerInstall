@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  airu1:
+    image: crossfw/airu
+    container_name: airu1
+    restart: always
+    volumes:
+      - ./airu.json:/etc/au/config.json
+      - ./cert/:/usr/local/share/au/
+      - ./xray-log/xray.log:/var/log/xray/xray.log
+  xray-airu:
+    image: teddysun/xray
+    container_name: xray-airu
+    restart: always
+    network_mode: host
+    volumes:
+    - ./xray.json:/etc/xray/config.json
+    - /var/log/xray/xray.log:/var/log/xray.log
