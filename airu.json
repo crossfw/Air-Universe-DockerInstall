@@ -3,7 +3,7 @@
     "log_level": "info"
   },
   "panel": {
-    "type": "v2board",
+    "type": "sspanel",
     "url": "https://SSPanel.address",
     "key": "SSPanel-Key",
     "node_ids": [1, 2],
@@ -11,7 +11,7 @@
   },
   "proxy": {
     "type": "xray",
-    "api_address": "xray-airu",
+    "api_address": "127.0.0.1",
     "api_port": 10085,
     "log_path": "/var/log/xray/xray.log"
   }

@@ -5,6 +5,7 @@ services:
     image: crossfw/airu
     container_name: airu1
     restart: always
+    network_mode: host
     volumes:
       - ./airu.json:/etc/au/config.json
       - ./cert/:/usr/local/share/au/
