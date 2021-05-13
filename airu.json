@@ -13,6 +13,6 @@
     "type": "xray",
     "api_address": "127.0.0.1",
     "api_port": 10085,
-    "log_path": "/var/log/xray/xray.log"
+    "log_path": "/var/log/xray.log"
   }
 }
