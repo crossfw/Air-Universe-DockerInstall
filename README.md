@@ -11,6 +11,17 @@ rm -rf which dc  # 若系统中存在 dc 则删除，这个 dc 就是个计算�
 ln -s /usr/local/bin/docker-compose /usr/bin/dc
 ```
 
+### Clone仓库
+首先安装git
+```shell
+apt install git 或 yum Install git
+```
+然后cd到欲安装目录，执行
+```shell
+git clone https://github.com/crossfw/Air-Universe-DockerInstall
+cd Air-Universe-DockerInstall
+```
+
 ### 配置配置文件
 一般来说，只需要修改 `airu.json` 中的 `panel` 部分即可
 
@@ -50,10 +61,7 @@ dc up -d
 ### 多面板对接
 
 1. `cp ./airu.json ./airu2.json`
-2. 请参考 [配置文件文档](https://github.com/crossfw/Air-Universe/wiki/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6) 添加 airu 和 airu2 配置文件的 proxy.in_tags 确保tag名称不一样
+2. 请参考 [配置文件文档](https://github.com/crossfw/Air-Universe/wiki/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6) 添加 airu 和 airu2 配置文件的 proxy.in_tags 确保tag名称不一样, 自行完成 `panel` 部分的修改。
 3. 请复制 docker-compose.yml 的 airu1 项至最后一行，取名任意(建议airu2). 
 4. 修改 airu2中的volumes的第一项配置文件地址到 `./airu2.json:/etc/au/config.json`
 5. 启动
-
-### 已知问题
-1. 在 ipv4 和 ipv6 双栈机器上,只监听 ipv6.
