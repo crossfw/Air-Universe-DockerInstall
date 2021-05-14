@@ -12,7 +12,7 @@
   "proxy": {
     "type": "xray",
     "api_address": "127.0.0.1",
-    "api_port": 10085,
+    "api_port": 10084,
     "log_path": "/var/log/xray.log"
   }
 }
