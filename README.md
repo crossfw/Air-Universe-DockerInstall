@@ -14,7 +14,7 @@ ln -s /usr/local/bin/docker-compose /usr/bin/dc
 ### Clone仓库
 首先安装git
 ```shell
-apt install git 或 yum Install git
+apt install git 或 yum install git
 ```
 然后cd到欲安装目录，执行
 ```shell
