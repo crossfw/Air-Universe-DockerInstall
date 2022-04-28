@@ -18,3 +18,4 @@ services:
     volumes:
     - ./xray.json:/etc/xray/config.json
     - ./xray-log/xray.log:/var/log/xray.log
+    - ./cert/:/usr/local/share/au/
